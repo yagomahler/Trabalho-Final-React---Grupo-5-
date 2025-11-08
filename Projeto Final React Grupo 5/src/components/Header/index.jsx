@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Header.module.css";
+import { Link } from "react-router-dom";
 const Header = () => {
   const [searchTerm, setSearchTerm] = useState("");
   return (
@@ -7,7 +8,8 @@ const Header = () => {
       <div className="header-container">
         <div className="header-content">
           <a href="#" className="logo-link">
-            <span className="logo-icon">⚡</span> SerraTech Store
+            <Link to={"/"}><span className="logo-icon">⚡</span> SerraTech Store</Link>
+            
           </a>
 
           <div className="search-wrapper">
@@ -25,13 +27,15 @@ const Header = () => {
 
           <div className="nav-links">
             <a href="#" className="nav-link">
+              <Link to={"/login"}></Link>
               👤 Conta
             </a>
             <a href="#" className="nav-link">
               ❤️ Favoritos
             </a>
             <a href="#" className="nav-link">
-              🛒 Carrinho
+              <Link to={"/compras"}>🛒 Carrinho</Link>
+              
               <span className="cart-badge">0</span>
             </a>
           </div>

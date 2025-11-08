@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Home.css";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 const Home = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -40,6 +42,8 @@ const Home = () => {
   };
 
   return (
+    <div>
+    <Header/>
     <div className="home-container">
       <div className="categories-bar">
         <div className="categories-container">
@@ -203,6 +207,7 @@ const Home = () => {
                     </button>
                   </div>
                 </div>
+                
               ))}
             </div>
 
@@ -229,6 +234,8 @@ const Home = () => {
       </div>
 
       {}
+    </div>
+    <Footer/>
     </div>
   );
 };
