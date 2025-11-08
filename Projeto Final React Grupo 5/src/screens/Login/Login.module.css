@@ -1,0 +1,51 @@
+.loginContainer {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 20px;
+}
+
+/* Card principal */
+.loginBox {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.loginBox:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Botão de login */
+.loginButton {
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease;
+}
+
+.loginButton:hover {
+    transform: scale(1.03);
+    background-color: #0a58ca !important;
+}
+
+/* Mensagem de erro */
+.erro {
+    color: #dc3545;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+/* Modo responsivo */
+@media (max-width: 480px) {
+    .loginBox {
+        padding: 1.5rem;
+        border-radius: 12px;
+    }
+}
