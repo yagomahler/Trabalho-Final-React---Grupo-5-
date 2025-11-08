@@ -1,9 +1,15 @@
-import React from 'react'
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Home from "./screens/Main";
 
-const App = () => {
+function App() {
   return (
-    <div>App</div>
-  )
+    <div>
+      <Header />
+      <Home />
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
