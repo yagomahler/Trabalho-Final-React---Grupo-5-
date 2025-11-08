@@ -27,11 +27,12 @@ const Header = () => {
 
           <div className="nav-links">
             <a href="#" className="nav-link">
-              <Link to={"/login"}></Link>
-              👤 Conta
+              <Link to={"/login"}>👤 Conta</Link>
+              
             </a>
             <a href="#" className="nav-link">
-              ❤️ Favoritos
+              <Link to={"/sobre"}>❤️ Sobre</Link>
+              
             </a>
             <a href="#" className="nav-link">
               <Link to={"/compras"}>🛒 Carrinho</Link>
