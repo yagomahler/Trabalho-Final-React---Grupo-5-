@@ -40,7 +40,7 @@ const Sobre = () => {
             <div className={styles.socioCard}>
               <div className={styles.foto}>
                 <img 
-                  src="/images/kayo.jpg" 
+                  src="../src/assets/kayo.jpeg"
                   alt="Kayo Rentes - Diretor de Ideias Improváveis" 
                   className={styles.fotoImg}
                 />
@@ -52,7 +52,7 @@ const Sobre = () => {
             <div className={styles.socioCard}>
               <div className={styles.foto}>
                 <img 
-                  src="/images/marcos.jpg" 
+                  src="../src/assets/marcos.jpeg" 
                   alt="Marcos Felix - Mestre Supremo das Vendas" 
                   className={styles.fotoImg}
                 />
@@ -64,7 +64,7 @@ const Sobre = () => {
             <div className={styles.socioCard}>
               <div className={styles.foto}>
                 <img 
-                  src="/images/pedro.jpg" 
+                  src="../src/assets/pedro.jpeg" 
                   alt="Pedro Tavares - Engenheiro-Chefe das Gambiarras" 
                   className={styles.fotoImg}
                 />
@@ -76,7 +76,7 @@ const Sobre = () => {
             <div className={styles.socioCard}>
               <div className={styles.foto}>
                 <img 
-                  src="/images/yago.jpg" 
+                  src="../src/assets/yago.jpeg" 
                   alt="Yago Mahler - Guardião dos Códigos Perdidos" 
                   className={styles.fotoImg}
                 />
