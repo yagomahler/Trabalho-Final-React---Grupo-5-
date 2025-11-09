@@ -1,17 +1,96 @@
-import React from 'react'
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import styles from './Sobre.module.css';
 
 const Sobre = () => {
   return (
     <div>
       <Header />
 
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In, officiis! Ipsum architecto asperiores esse cum tenetur earum dolor fuga doloremque assumenda, accusamus dolorem expedita minima culpa velit eos, deserunt dolorum.</p>
+      <div className={styles.sobreContainer}>
+        <section className={styles.historia}>
+          <h1 className={styles.titulo}>Sobre a SerraTech Store</h1>
+          <div className={styles.textoWrapper}>
+            <p className={styles.textoHistoria}>
+              A SerraTech Store nasceu de um sonho: quatro amigos que 
+              acreditavam que vender computadores podia ser tão emocionante quanto jogar 
+              uma partida de Counter-Strike no último round.
+            </p>
+            <p className={styles.textoHistoria}>
+              Tudo começou em uma garagem apertada, cheia de cabos, café e ideias 
+              mirabolantes. Eles montavam PCs enquanto discutiam se o LED azul dava 
+              mais FPS que o vermelho. Com o tempo, as gambiarras viraram soluções 
+              criativas, os memes viraram planos de marketing e, de repente, a SerraTech Store 
+              virou referência em inovação — e em histórias que ninguém acredita até ver.
+            </p>
+            <p className={styles.textoHistoria}>
+              Hoje, a empresa é conhecida por misturar tecnologia com bom humor, vendendo 
+              máquinas potentes e criando experiências únicas pra quem ama o mundo digital.
+            </p>
+            <p className={styles.textoHistoria}>
+              Como eles mesmos dizem: <strong>"a gente não vende só computadores, a gente 
+              vende desculpas pra passar mais tempo na frente deles."</strong>
+            </p>
+          </div>
+        </section>
 
-<Footer/>
+        <section className={styles.fundadores}>
+          <h2 className={styles.subtitulo}>Fundadores da SerraTech</h2>
+          <div className={styles.sociosGrid}>
+            <div className={styles.socioCard}>
+              <div className={styles.foto}>
+                <img 
+                  src="/images/kayo.jpg" 
+                  alt="Kayo Rentes - Diretor de Ideias Improváveis" 
+                  className={styles.fotoImg}
+                />
+              </div>
+              <h3 className={styles.nome}>Kayo Rentes</h3>
+              <p className={styles.cargo}>Diretor de Ideias Improváveis</p>
+            </div>
+
+            <div className={styles.socioCard}>
+              <div className={styles.foto}>
+                <img 
+                  src="/images/marcos.jpg" 
+                  alt="Marcos Felix - Mestre Supremo das Vendas" 
+                  className={styles.fotoImg}
+                />
+              </div>
+              <h3 className={styles.nome}>Marcos Felix</h3>
+              <p className={styles.cargo}>Mestre Supremo das Vendas</p>
+            </div>
+
+            <div className={styles.socioCard}>
+              <div className={styles.foto}>
+                <img 
+                  src="/images/pedro.jpg" 
+                  alt="Pedro Tavares - Engenheiro-Chefe das Gambiarras" 
+                  className={styles.fotoImg}
+                />
+              </div>
+              <h3 className={styles.nome}>Pedro Tavares</h3>
+              <p className={styles.cargo}>Engenheiro-Chefe das Gambiarras</p>
+            </div>
+
+            <div className={styles.socioCard}>
+              <div className={styles.foto}>
+                <img 
+                  src="/images/yago.jpg" 
+                  alt="Yago Mahler - Guardião dos Códigos Perdidos" 
+                  className={styles.fotoImg}
+                />
+              </div>
+              <h3 className={styles.nome}>Yago Mahler</h3>
+              <p className={styles.cargo}>Guardião dos Códigos Perdidos</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
 export default Sobre;

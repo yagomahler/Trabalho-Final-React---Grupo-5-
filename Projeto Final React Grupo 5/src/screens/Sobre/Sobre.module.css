@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sobreContainer {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  padding: 2rem 1rem;
+}
+
+.historia {
+  max-width: 1200px;
+  margin: 0 auto 4rem auto;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.titulo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #212529;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.textoWrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.textoHistoria {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #212529;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.textoHistoria strong {
+  color: #ffc107;
+  font-weight: bold;
+}
+
+.fundadores {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.subtitulo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #212529;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.sociosGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.socioCard {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.socioCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.foto {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  background-color: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid #ffc107;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fotoImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nome {
+  font-size: 1.375rem;
+  font-weight: bold;
+  color: #212529;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.cargo {
+  font-size: 1rem;
+  color: #6c757d;
+  font-weight: 500;
+  text-align: center;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .sobreContainer {
+    padding: 1.5rem 1rem;
+  }
+
+  .historia {
+    padding: 1.5rem;
+  }
+
+  .titulo {
+    font-size: 2rem;
+  }
+
+  .subtitulo {
+    font-size: 1.5rem;
+  }
+
+  .textoHistoria {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .fundadores {
+    padding: 1.5rem;
+  }
+
+  .sociosGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .foto {
+    width: 150px;
+    height: 150px;
+  }
+
+  .nome {
+    font-size: 1.25rem;
+  }
+
+  .cargo {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo {
+    font-size: 1.75rem;
+  }
+
+  .subtitulo {
+    font-size: 1.375rem;
+  }
+
+  .socioCard {
+    padding: 1rem;
+  }
+}
