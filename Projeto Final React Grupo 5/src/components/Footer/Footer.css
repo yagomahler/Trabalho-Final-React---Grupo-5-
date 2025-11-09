@@ -37,8 +37,12 @@
 }
 
 .footer-link {
-  color: white;
+  display: flex;
+  align-items: center;
   text-decoration: none;
+  color: white;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
 }
 
 .footer-divider {
@@ -60,4 +64,27 @@
   .filters-card {
     margin-bottom: 1rem;
   }
+}
+
+.footer-link:hover {
+  opacity: 0.8;
+}
+
+
+.icon {
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+
+.facebook {
+  color: #1877F2;
+}
+
+.instagram {
+  color: #E4405F;
+}
+
+.twitter {
+  color: #1DA1F2;
 }
