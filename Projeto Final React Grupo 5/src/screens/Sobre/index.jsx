@@ -35,7 +35,7 @@ const Sobre = () => {
         </section>
 
         <section className={styles.fundadores}>
-          <h2 className={styles.subtitulo}>Fundadores da SerraTech</h2>
+          <h2 className={styles.subtitulo}>Fundadores da SerraTech Store</h2>
           <div className={styles.sociosGrid}>
             <div className={styles.socioCard}>
               <div className={styles.foto}>
