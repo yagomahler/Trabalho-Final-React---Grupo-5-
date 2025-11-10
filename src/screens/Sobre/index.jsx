@@ -60,7 +60,7 @@ const Sobre = () => {
                 />
               </div>
               <h3 className={styles.nome}>
-                <a href="Marcos Felix" target="_blank">Marcos Felix</a>
+                <a href="https://www.linkedin.com/in/marcos-felix-695575326/" target="_blank">Marcos Felix</a>
                 </h3>
               <p className={styles.cargo}>Mestre Supremo das Vendas</p>
             </div>
