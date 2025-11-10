@@ -29,8 +29,8 @@ const Home = () => {
 
   const categories = [
     { id: "all", name: "Todos os Produtos", icon: "📦" },
-    { id: "computadores", name: "Computadores", icon: "💻" },
-    { id: "notebooks", name: "Notebooks", icon: "🖥️" },
+    { id: "computadores", name: "Computadores", icon: "🖥️" }, 
+    { id: "notebooks", name: "Notebooks", icon: "💻" }, 
     { id: "periféricos", name: "Periféricos", icon: "⌨️" },
     { id: "smartphones", name: "Smartphones", icon: "📱" },
     { id: "tvs", name: "TVs", icon: "📺" },
