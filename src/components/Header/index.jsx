@@ -16,8 +16,9 @@ const Header = () => {
       <div className="header-container">
         <div className="header-content">
           <a href="#" className="logo-link">
-            <Link to={"/"}><span className="logo-icon">⚡</span> SerraTech Store</Link>
-            
+            <Link to={"/"}>
+              <span className="logo-icon">⚡</span> SerraTech Store
+            </Link>
           </a>
 
           <div className="search-wrapper">
@@ -36,11 +37,9 @@ const Header = () => {
           <div className="nav-links">
             <a href="#" className="nav-link">
               <Link to={"/login"}>👤 Conta</Link>
-              
             </a>
             <a href="#" className="nav-link">
               <Link to={"/sobre"}>❤️ Sobre</Link>
-              
             </a>
             <a href="#" className="nav-link">
               <Link to={"/compras"}>🛒 Carrinho</Link>
@@ -49,7 +48,7 @@ const Header = () => {
             </a>
           </div>
 
-          <Acessibilidade/>
+          <Acessibilidade />
         </div>
       </div>
     </nav>

@@ -180,3 +180,12 @@
     padding: 1rem;
   }
 }
+
+.nome a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.nome a:hover {
+  text-decoration: underline;
+}
