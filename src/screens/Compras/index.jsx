@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { usaCarrinho } from "../../contexts/Contexto";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import ModalConfirmacao from "../../components/ConfirmaCompra";
 import styles from "./Compras.module.css";
 
 const Compras = () => {
@@ -12,12 +13,26 @@ const Compras = () => {
     precoTotal,
   } = usaCarrinho();
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  
+  const handleFinalizarCompra = () => {
+    if (carrinho.length > 0) {
+      setIsModalOpen(true);
+    } else {
+      alert("Seu carrinho está vazio!");
+    }
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div>
       <Header />
 
       <div className={styles.comprasContainer}>
-        {/* Seção principal de produtos */}
         <div className={styles.produtosContainer}>
           <h2 className={styles.titulo}>🛒 Carrinho de Compras</h2>
 
@@ -61,7 +76,6 @@ const Compras = () => {
           )}
         </div>
 
-        {/* Seção lateral de resumo */}
         <div className={styles.resumoContainer}>
           <h3 className={styles.resumoTitulo}>🧾 Resumo da Compra</h3>
           <p className={styles.resumoTexto}>
@@ -73,13 +87,20 @@ const Compras = () => {
               R$ {precoTotal.toFixed(2).replace(".", ",")}
             </strong>
           </p>
-          <button className={styles.botaoComprar}>
+          <button className={styles.botaoComprar} onClick={handleFinalizarCompra}>
             💳 Finalizar Compra
           </button>
         </div>
       </div>
 
       <Footer />
+
+      <ModalConfirmacao 
+        isOpen={isModalOpen} 
+        onClose={handleCloseModal} 
+        precoTotal={precoTotal} 
+      />
+
     </div>
   );
 };
