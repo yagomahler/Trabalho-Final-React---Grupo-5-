@@ -1,22 +1,18 @@
 import { BrowserRouter } from "react-router-dom";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Home from "./screens/Main";
 import AppRouter from "./routes/AppRouter";
+import { CarrinhoProvider } from "./contexts/Contexto";
 
 function App() {
   return (
     <div>
+     <CarrinhoProvider>
       <BrowserRouter>
-      <AppRouter/>
+        <AppRouter />
       </BrowserRouter>
+    </CarrinhoProvider>
       
     </div>
   );
 }
 
 export default App;
-
-{/*<Header />
-      <Home />
-      <Footer />*/}
