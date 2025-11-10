@@ -41,9 +41,10 @@ const Header = () => {
               🛒 Carrinho
               <span className="cart-badge">{carrinho.length}</span>
             </Link>
+            <Acessibilidade />
           </div>
 
-          <Acessibilidade />
+          
         </div>
       </div>
     </nav>
