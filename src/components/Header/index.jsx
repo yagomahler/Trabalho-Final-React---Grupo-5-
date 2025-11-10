@@ -45,7 +45,7 @@ const Header = () => {
             <a href="#" className="nav-link">
               <Link to={"/compras"}>🛒 Carrinho</Link>
               
-              <span className="cart-badge">{carrinho.length}</span>
+              <span className="cart-badge">{carrinho.length} </span>
             </a>
           </div>
 
