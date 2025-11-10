@@ -7,7 +7,9 @@ import { usaCarrinho } from "../../contexts/Contexto";
 const Header = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
-  const { carrinho } = usaCarrinho();
+  const {
+      carrinho,
+    } = usaCarrinho();
 
   return (
     <nav className="header-nav">
@@ -41,7 +43,7 @@ const Header = () => {
             </a>
             <a href="#" className="nav-link">
               <Link to={"/compras"}>🛒 Carrinho</Link>
-
+              
               <span className="cart-badge">{carrinho.length} </span>
             </a>
           </div>
