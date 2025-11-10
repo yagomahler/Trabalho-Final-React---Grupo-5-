@@ -1,0 +1,38 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --preto-primario: #121212;
+  --branco-primario: #ffffff;
+  --cinza-claro-bg: #f8f9fa;
+  --cinza-header-footer: #212529;
+  --amarelo-destaque: #ffc107;
+  --vermelho-erro: #dc3545;
+  --verde-sucesso: #198754;
+  --cinza-borda: #ced4da;
+  --cinza-texto-secundario: #6c757d;
+  --background-color: var(--cinza-claro-bg);
+  --font-color: var(--preto-primario);
+  --card-bg: var(--branco-primario);
+  --header-bg: var(--cinza-header-footer);
+ 
+}
+
+
+body {
+  background-color: var(--background-color);
+  color: var(--font-color);
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+/* Estilos gerais que você tinha no home.css */
+.home-container {
+  min-height: 100vh;
+  /* Agora usa a variável dinâmica */
+  background-color: var(--background-color); 
+}
+

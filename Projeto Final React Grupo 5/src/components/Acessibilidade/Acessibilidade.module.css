@@ -1,0 +1,26 @@
+
+#secao-acessibilidade {
+  padding: 10px 0;
+  text-align: right;
+  background-color: var(--background-color); 
+}
+
+#container-botoes {
+}
+
+.btnAceC {
+  padding: 8px 15px;
+  border: 1px solid var(--font-color); 
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  
+  background-color: var(--card-bg);
+  color: var(--font-color);
+  
+  transition: all 0.3s ease; 
+}
+
+.btnAceC:hover {
+    opacity: 0.8;
+}

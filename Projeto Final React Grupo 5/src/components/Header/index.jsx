@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./Header.module.css";
 import { Link } from "react-router-dom";
+import { Acessibilidade } from "../Acessibilidade";
+
 const Header = () => {
   const [searchTerm, setSearchTerm] = useState("");
   return (
@@ -40,6 +42,8 @@ const Header = () => {
               <span className="cart-badge">0</span>
             </a>
           </div>
+
+          <Acessibilidade/>
         </div>
       </div>
     </nav>

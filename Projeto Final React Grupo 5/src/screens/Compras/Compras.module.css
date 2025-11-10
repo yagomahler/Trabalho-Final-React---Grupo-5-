@@ -3,12 +3,11 @@
   justify-content: space-between;
   align-items: flex-start;
   padding: 2rem;
-  background-color: #f8f9fa;
+  background-color: var(--background-color);
   min-height: 100vh;
   gap: 2rem;
 }
 
-/* Lista de produtos */
 .produtosContainer {
   flex: 1;
 }
@@ -16,17 +15,19 @@
 .titulo {
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
+  color: var(--font-color);
 }
 
 .carrinhoVazio {
   font-size: 1.1rem;
-  color: #6c757d;
+  color: var(--cinza-texto-secundario);
 }
 
 .cardProduto {
   display: flex;
   align-items: flex-start;
-  background-color: white;
+  background-color: var(--card-bg);
+  color: var(--font-color);
   border-radius: 0.5rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 1.5rem;
@@ -39,7 +40,7 @@
   height: 120px;
   object-fit: contain;
   border-radius: 0.5rem;
-  background-color: #f1f3f5;
+  background-color: var(--background-color);
 }
 
 .infoProduto {
@@ -49,23 +50,24 @@
 .nomeProduto {
   font-size: 1.1rem;
   margin-bottom: 0.3rem;
+  color: var(--font-color);
 }
 
 .categoriaProduto {
-  color: #6c757d;
+  color: var(--cinza-texto-secundario);
   font-size: 0.9rem;
   margin-bottom: 0.5rem;
 }
 
 .precoProduto {
-  color: #198754;
+  color: var(--verde-sucesso);
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
 .quantidade {
   font-size: 0.9rem;
-  color: #495057;
+  color: var(--cinza-texto-secundario);
 }
 
 .botoes {
@@ -73,8 +75,8 @@
 }
 
 .botaoRemover {
-  background-color: #dc3545;
-  color: white;
+  background-color: var(--vermelho-erro);
+  color: var(--branco-primario);
   border: none;
   padding: 0.6rem 1rem;
   border-radius: 0.3rem;
@@ -88,9 +90,9 @@
 
 .botaoLimpar {
   margin-top: 1rem;
-  background-color: #ffc107;
+  background-color: var(--amarelo-destaque);
   border: none;
-  color: #212529;
+  color: var(--preto-primario);
   padding: 0.7rem 1.2rem;
   border-radius: 0.3rem;
   cursor: pointer;
@@ -101,10 +103,10 @@
   background-color: #e0a800;
 }
 
-/* Painel lateral de compra */
 .resumoContainer {
   width: 25%;
-  background-color: white;
+  background-color: var(--card-bg);
+  color: var(--font-color);
   padding: 1.5rem;
   border-radius: 0.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -130,8 +132,8 @@
 }
 
 .botaoComprar {
-  background-color: #198754;
-  color: white;
+  background-color: var(--verde-sucesso);
+  color: var(--branco-primario);
   border: none;
   width: 100%;
   padding: 0.8rem;
@@ -144,7 +146,6 @@
   background-color: #146c43;
 }
 
-/* Responsividade */
 @media (max-width: 900px) {
   .comprasContainer {
     flex-direction: column;
