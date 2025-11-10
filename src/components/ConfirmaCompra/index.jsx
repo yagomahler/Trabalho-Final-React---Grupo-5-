@@ -17,7 +17,7 @@ const ModalConfirmacao = ({ isOpen, onClose, precoTotal }) => {
         <div className={styles.detalhes}>
             <p>Total a pagar: <strong>R$ {precoTotal.toFixed(2).replace(".", ",")}</strong></p>
             <div className={styles.qrCodePlaceholder}>
-                <img src="../src/assets/QRcode-cobrar.jpeg" alt="QR Code Pagamento" width="350px"/>
+                <img src="../src/assets/QRcode-cobrar.jpeg" alt="QR Code Pagamento" width="100%"/>
                 <p>chave pix: +5524998777542</p>
             </div>
         </div>

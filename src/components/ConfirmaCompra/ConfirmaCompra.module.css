@@ -73,3 +73,15 @@
     background-color: #28a745;
     color: white;
 }
+
+
+@media (max-width: 900px) {
+  .modalOverlay {
+    flex-direction: column;
+  }
+
+  .modalContent {
+    width: 80%;
+  }
+
+}
