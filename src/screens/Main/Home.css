@@ -34,7 +34,7 @@
 .logo-link {
   font-size: 1.5rem;
   font-weight: bold;
-  color: var(--font-color);
+  color: #fff;
   text-decoration: none;
 }
 
@@ -74,10 +74,11 @@
 .nav-links {
   display: flex;
   gap: 1rem;
+  color: #fff;
 }
 
 .nav-link {
-  color: var(--font-color);
+  color: #fff;
   text-decoration: none;
   position: relative;
 }

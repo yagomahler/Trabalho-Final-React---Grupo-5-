@@ -1,25 +1,21 @@
 import { useState } from "react";
-import "./Header.module.css";
 import { Link } from "react-router-dom";
-import { Acessibilidade } from "../Acessibilidade";
 import { usaCarrinho } from "../../contexts/Contexto";
+import { Acessibilidade } from "../Acessibilidade";
+import "./Header.module.css";
 
 const Header = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
-  const {
-      carrinho,
-    } = usaCarrinho();
+  const { carrinho } = usaCarrinho();
 
   return (
     <nav className="header-nav">
       <div className="header-container">
         <div className="header-content">
-          <a href="#" className="logo-link">
-            <Link to={"/"}>
-              <span className="logo-icon">⚡</span> SerraTech Store
-            </Link>
-          </a>
+          <Link to="/" className="logo-link">
+            <span className="logo-icon">💻</span> SerraTech Store
+          </Link>
 
           <div className="search-wrapper">
             <div className="search-container">
@@ -35,17 +31,16 @@ const Header = () => {
           </div>
 
           <div className="nav-links">
-            <a href="#" className="nav-link">
-              <Link to={"/login"}>👤 Conta</Link>
-            </a>
-            <a href="#" className="nav-link">
-              <Link to={"/sobre"}>❤️ Sobre</Link>
-            </a>
-            <a href="#" className="nav-link">
-              <Link to={"/compras"}>🛒 Carrinho</Link>
-              
-              <span className="cart-badge">{carrinho.length} </span>
-            </a>
+            <Link className="nav-link" to="/login">
+              👤 Conta
+            </Link>
+            <Link className="nav-link" to="/sobre">
+              ❤️ Sobre
+            </Link>
+            <Link className="nav-link" to="/compras">
+              🛒 Carrinho
+              <span className="cart-badge">{carrinho.length}</span>
+            </Link>
           </div>
 
           <Acessibilidade />
