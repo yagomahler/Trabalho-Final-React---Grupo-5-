@@ -45,7 +45,9 @@ const Sobre = () => {
                   className={styles.fotoImg}
                 />
               </div>
-              <h3 className={styles.nome}>Kayo Rentes</h3>
+              <h3 className={styles.nome}>
+                <a href="https://www.linkedin.com/in/kayo-rentes-da-concei%C3%A7%C3%A3o-5b4bb4226/" target="_blank">Kayo Rentes</a>
+                </h3>
               <p className={styles.cargo}>Diretor de Ideias Improváveis</p>
             </div>
 
@@ -57,7 +59,9 @@ const Sobre = () => {
                   className={styles.fotoImg}
                 />
               </div>
-              <h3 className={styles.nome}>Marcos Felix</h3>
+              <h3 className={styles.nome}>
+                <a href="Marcos Felix" target="_blank">Marcos Felix</a>
+                </h3>
               <p className={styles.cargo}>Mestre Supremo das Vendas</p>
             </div>
 
@@ -69,7 +73,9 @@ const Sobre = () => {
                   className={styles.fotoImg}
                 />
               </div>
-              <h3 className={styles.nome}>Pedro Tavares</h3>
+              <h3 className={styles.nome}>
+                <a href="https://www.linkedin.com/in/pedro-tavares-88a19614b/" target="_blank">Pedro Tavares</a>
+                </h3>
               <p className={styles.cargo}>Engenheiro-Chefe das Gambiarras</p>
             </div>
 
@@ -81,7 +87,9 @@ const Sobre = () => {
                   className={styles.fotoImg}
                 />
               </div>
-              <h3 className={styles.nome}>Yago Mahler</h3>
+              <h3 className={styles.nome}>
+                <a href="https://www.linkedin.com/in/yago-mahler-sobral-de-sousa-a7905735b/" target="_blank">Yago Mahler</a>
+                </h3>
               <p className={styles.cargo}>Guardião dos Códigos Perdidos</p>
             </div>
           </div>
