@@ -1,5 +1,4 @@
-
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -404,7 +403,7 @@
   .main-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .filters-card {
     margin-bottom: 1rem;
   }
