@@ -1,0 +1,156 @@
+.comprasContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  gap: 2rem;
+}
+
+/* Lista de produtos */
+.produtosContainer {
+  flex: 1;
+}
+
+.titulo {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.carrinhoVazio {
+  font-size: 1.1rem;
+  color: #6c757d;
+}
+
+.cardProduto {
+  display: flex;
+  align-items: flex-start;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.imagemProduto {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border-radius: 0.5rem;
+  background-color: #f1f3f5;
+}
+
+.infoProduto {
+  flex: 1;
+}
+
+.nomeProduto {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.categoriaProduto {
+  color: #6c757d;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.precoProduto {
+  color: #198754;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.quantidade {
+  font-size: 0.9rem;
+  color: #495057;
+}
+
+.botoes {
+  margin-top: 0.8rem;
+}
+
+.botaoRemover {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.botaoRemover:hover {
+  background-color: #b02a37;
+}
+
+.botaoLimpar {
+  margin-top: 1rem;
+  background-color: #ffc107;
+  border: none;
+  color: #212529;
+  padding: 0.7rem 1.2rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.botaoLimpar:hover {
+  background-color: #e0a800;
+}
+
+/* Painel lateral de compra */
+.resumoContainer {
+  width: 25%;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 100px;
+}
+
+.resumoTitulo {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.resumoTexto {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.resumoTotal {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.botaoComprar {
+  background-color: #198754;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.botaoComprar:hover {
+  background-color: #146c43;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .comprasContainer {
+    flex-direction: column;
+  }
+
+  .resumoContainer {
+    width: 100%;
+  }
+}
