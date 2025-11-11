@@ -13,6 +13,7 @@
 
 .login-container .col-md-5 {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: var(--background-color);
 }
 
 .login-container .col-md-5:hover {

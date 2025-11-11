@@ -87,7 +87,7 @@ const Login = () => {
             <div className="container py-5">
                 <div className="row justify-content-center">
                     {/* LOGIN */}
-                    <div className="col-md-5 bg-white shadow p-4 rounded me-md-3 mb-4 mb-md-0">
+                    <div className="col-md-5 shadow p-4 rounded me-md-3 mb-4 mb-md-0">
                         <div className="text-center mb-4">
                             <i className="bi bi-person-circle text-primary" style={{ fontSize: "3rem" }}></i>
                             <h4 className="mt-2 fw-bold">Entrar</h4>
@@ -123,7 +123,7 @@ const Login = () => {
                     </div>
 
                     {/* CADASTRO */}
-                    <div className="col-md-5 bg-white shadow p-4 rounded">
+                    <div className="col-md-5 shadow p-4 rounded">
                         <div className="text-center mb-4">
                             <i className="bi bi-person-plus-fill text-success" style={{ fontSize: "3rem" }}></i>
                             <h4 className="mt-2 fw-bold">Criar Conta</h4>

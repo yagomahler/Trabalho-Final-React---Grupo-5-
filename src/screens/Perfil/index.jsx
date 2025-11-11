@@ -55,6 +55,7 @@ const Perfil = () => {
         try {
             await axios.delete(`${API_URL}/${usuario.id}`);
             localStorage.removeItem("usuario");
+            logout();
             alert("Conta excluída com sucesso!");
             navigate("/");
         } catch (error) {
