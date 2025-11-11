@@ -31,11 +31,11 @@ const Login = () => {
             });
 
             const clientes = response.data;
-            const clienteExiste = clientes.some((c) => c.email === emailLogin);
+            const clienteExiste = clientes.find((c) => c.email === emailLogin);
 
             if (clienteExiste) {
                 login(clienteExiste)
-                setSucesso("Login realizado com sucesso!");
+                setSucesso(`Login realizado com sucesso! Bem-vindo(a), ${clienteExiste.nome}.`);
             } else {
                 setErro("E-mail não encontrado no sistema!");
             }
