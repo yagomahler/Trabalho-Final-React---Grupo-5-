@@ -1,87 +1,98 @@
 .modalOverlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
 .modalContent {
-    background-color: var(--background-color);
-    padding: 30px;
-    border-radius: 8px;
-    max-width: 500px;
-    width: 90%;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    position: relative;
-    text-align: center;
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  text-align: center;
 }
 
 .fechar {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 24px;
-    cursor: pointer;
-    color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #aaa;
 }
 
 .fechar:hover {
-    color: #333;
+  color: #333;
 }
 
 .detalhes {
-    margin: 20px 0;
-    padding: 15px;
-    background-color: var(--background-color);
-    border-radius: 5px;
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
 }
 
 .qrCodePlaceholder {
-    margin-top: 15px;
-    padding: 20px;
-    background-color: var(--background-color);
-    border: 1px solid var(--cinza-header-footer);
-    font-style: italic;
+  margin-top: 15px;
+  padding: 20px;
+  background-color: #eee;
+  border: 1px dashed #ccc;
+  font-style: italic;
+  margin: 20px 0;
+  padding: 15px;
+  background-color: var(--background-color);
+  border-radius: 5px;
+}
+
+.qrCodePlaceholder {
+  margin-top: 15px;
+  padding: 20px;
+  background-color: var(--background-color);
+  border: 1px solid var(--cinza-header-footer);
+  font-style: italic;
 }
 
 .botoesContainer {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }
 
-.btnCancelar, .btnConfirmar {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
+.btnCancelar,
+.btnConfirmar {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .btnCancelar {
-    background-color: #ccc;
-    color: #333;
+  background-color: #ccc;
+  color: #333;
 }
 
 .btnConfirmar {
-    background-color: #28a745;
-    color: white;
+  background-color: #28a745;
+  color: white;
 }
 
-
-@media (max-width: 900px) {
-  .modalOverlay {
-    flex-direction: column;
+@media (max-width: 768px) {
+  .main-grid {
+    grid-template-columns: 1fr;
   }
 
-  .modalContent {
-    width: 80%;
+  .filters-card {
+    margin-bottom: 1rem;
   }
-
 }

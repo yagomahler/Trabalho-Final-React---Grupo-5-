@@ -85,11 +85,11 @@
 
 .cart-badge {
   position: absolute;
-  top: -8px;
+  top: -10px;
   right: -10px;
   background-color: var(--vermelho-erro);
   color: var(--branco-primario);
-  border-radius: 50%;
+  border-radius: 95%;
   padding: 2px 6px;
   font-size: 0.75rem;
 }
