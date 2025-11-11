@@ -2,12 +2,15 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { usaCarrinho } from "../../contexts/Contexto";
 import { Acessibilidade } from "../Acessibilidade";
+import { useUser } from "../../contexts/userContext";
 import "./Header.module.css";
+
 
 const Header = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
   const { carrinho } = usaCarrinho();
+  const { usuarioLogado } = useUser();
 
   return (
     <nav className="header-nav">
@@ -32,7 +35,7 @@ const Header = () => {
 
           <div className="nav-links">
             <Link className="nav-link" to="/login">
-              👤 Conta
+              👤 {usuarioLogado ? usuarioLogado.nome : "Conta"}
             </Link>
             <Link className="nav-link" to="/sobre">
               ❤️ Sobre

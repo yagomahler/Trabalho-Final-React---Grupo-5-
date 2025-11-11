@@ -5,6 +5,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import * as styles from "./Login.module.css";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import { useUser } from "../../contexts/userContext";
 
 const Login = () => {
     const [emailLogin, setEmailLogin] = useState("");
@@ -18,6 +19,8 @@ const Login = () => {
     const [erro, setErro] = useState("");
     const [sucesso, setSucesso] = useState("");
 
+    const { login } = useUser();
+
     const autenticar = async (e) => {
         e.preventDefault();
         setErro("");
@@ -28,10 +31,11 @@ const Login = () => {
             });
 
             const clientes = response.data;
-            const clienteExiste = clientes.some((c) => c.email === emailLogin);
+            const clienteExiste = clientes.find((c) => c.email === emailLogin);
 
             if (clienteExiste) {
-                setSucesso("Login realizado com sucesso!");
+                login(clienteExiste)
+                setSucesso(`Login realizado com sucesso! Bem-vindo(a), ${clienteExiste.nome}.`);
             } else {
                 setErro("E-mail não encontrado no sistema!");
             }
