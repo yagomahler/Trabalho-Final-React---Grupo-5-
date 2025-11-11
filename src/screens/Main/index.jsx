@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./Home.css";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import { usaCarrinho } from "../../contexts/Contexto";
@@ -14,7 +15,7 @@ const Home = () => {
   const navigate = useNavigate();
 
 
-  useEffect(()=> {
+  useEffect(() => {
     axios
       .get("http://localhost:8080/produtos")
       .then((response) => {
@@ -23,8 +24,8 @@ const Home = () => {
         navigate("/")
       })
       .catch("Erro na requisição");
-  },[]);
- 
+  }, []);
+
 
   const categories = [
     { id: "all", name: "Todos os Produtos", icon: "📦" },
@@ -53,11 +54,10 @@ const Home = () => {
                 <button
                   key={cat.id}
                   onClick={() => setSelectedCategory(cat.id)}
-                  className={`category-btn ${
-                    selectedCategory === cat.id
-                      ? "category-btn-active"
-                      : "category-btn-inactive"
-                  }`}
+                  className={`category-btn ${selectedCategory === cat.id
+                    ? "category-btn-active"
+                    : "category-btn-inactive"
+                    }`}
                 >
                   {cat.icon} {cat.name}
                 </button>
@@ -173,25 +173,26 @@ const Home = () => {
 
               {}
               <div className="products-grid">
-                {/* 
-                Substitir o array [1,2,3...] por products.map() quando conectar API
-                Exemplo: products.map((product) => ( ... use product.nome, product.preco, etc ... ))
-              */}
-                {produtos.map((props) => (
-                  <div key={props.id} className="product-card">
+                {produtos.map((produto) => (
+                  <div key={produto.id} className="product-card">
                     <div className="product-image-wrapper">
                       <div className="product-image-placeholder">
                         <div className="product-image-content">
-                          <div className="product-image-icon">{props.urlImagem}</div>
-                          <p className="product-image-text">Imagem da API</p>
+                          <img
+                            src={produto.urlImagem}
+                            alt={produto.nome}
+                            className="product-image-icon"
+                            width="100%"
+                            height="100%"/>
                         </div>
                       </div>
                       <span className="product-discount-badge">-15%</span>
                       <button className="product-favorite-btn">❤️</button>
                     </div>
                     <div className="product-body">
-                      <p className="product-category"> `Categoria ${props.categoria}` </p>
-                      <h6 className="product-name">{props.nome}</h6>
+                      <p className="product-category"> Categoria: {produto.categoria.nome} </p>
+
+                      <h6 className="product-name">{produto.nome}</h6>
                       <div className="product-rating">
                         <span className="rating-stars">⭐⭐⭐⭐⭐</span>
                         <span className="rating-count">(123)</span>
@@ -199,21 +200,26 @@ const Home = () => {
                       <div className="product-old-price">
                         <del className="old-price-text">R$ 1.299,00</del>
                       </div>
-                      <h5 className="product-price">{props.preco}</h5>
+                      <h5 className="product-price">
+                        R$ {produto.preco.toFixed(2).replace('.', ',')}
+                      </h5>
+
                       <p className="product-installment">
-                        ou 10x de R$ 109,90 sem juros
+                        ou 10x de R$ {(produto.preco / 10).toFixed(2).replace('.', ',')} sem juros
                       </p>
-                      <p>{props.descricao}</p>
+                      <p>{produto.descricao}</p>
                       <button
                         className="add-to-cart-btn"
                         onClick={() =>
                           addCarrinho({
-                            id: `${props.id}`,
-                            title: `Nome do Produto ${props.nome}`,
-                            category: `Categoria - ${props.categoria}`,
-                            price: `${props.preco}`,
-                            image: `${props.urlImagem}`,
-                          })}>
+                            id: produto.id,
+                            title: produto.nome,
+                            category: produto.categoria.nome,
+                            price: produto.preco,
+                            image: produto.urlImagem,
+                          })
+                        }
+                      >
                         🛒 Adicionar ao Carrinho
                       </button>
                     </div>
@@ -221,7 +227,6 @@ const Home = () => {
                 ))}
               </div>
 
-              {}
               <div className="pagination-container">
                 <button className="pagination-btn pagination-btn-disabled">
                   Anterior
@@ -243,7 +248,7 @@ const Home = () => {
           </div>
         </div>
 
-        {}
+        {/*  */}
       </div>
       <Footer />
     </div>
