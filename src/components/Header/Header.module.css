@@ -73,11 +73,11 @@
 
 .cart-badge {
   position: absolute;
-  top: -8px;
+  top: -10px;
   right: -10px;
   background-color: #dc3545;
   color: white;
-  border-radius: 50%;
+  border-radius: 95%;
   padding: 2px 6px;
   font-size: 0.75rem;
 }

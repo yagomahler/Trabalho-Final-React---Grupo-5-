@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Home.css";
-import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import Header from "../../components/Header";
 import { usaCarrinho } from "../../contexts/Contexto";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -29,8 +29,8 @@ const Home = () => {
 
   const categories = [
     { id: "all", name: "Todos os Produtos", icon: "📦" },
-    { id: "computadores", name: "Computadores", icon: "💻" },
-    { id: "notebooks", name: "Notebooks", icon: "🖥️" },
+    { id: "computadores", name: "Computadores", icon: "🖥️" },
+    { id: "notebooks", name: "Notebooks", icon: "💻" },
     { id: "periféricos", name: "Periféricos", icon: "⌨️" },
     { id: "smartphones", name: "Smartphones", icon: "📱" },
     { id: "tvs", name: "TVs", icon: "📺" },
@@ -67,12 +67,12 @@ const Home = () => {
         </div>
         <div className="main-container">
           <div className="main-grid">
-            { }
+            {}
             <div>
               <div className="filters-card">
                 <h5 className="filters-header">🔧 Filtros</h5>
                 <div className="filters-body">
-                  { }
+                  {}
                   <div className="filter-section">
                     <h6 className="filter-title">Faixa de Preço</h6>
                     <div className="price-input-wrapper">
@@ -115,7 +115,7 @@ const Home = () => {
                     </div>
                   </div>
 
-                  { }
+                  {}
                   <div className="filter-section">
                     <h6 className="filter-title">Marcas</h6>
                     {["Samsung", "Apple", "LG", "Sony"].map((brand) => (
@@ -128,7 +128,7 @@ const Home = () => {
                     ))}
                   </div>
 
-                  { }
+                  {}
                   <div className="filter-section">
                     <h6 className="filter-title">Avaliação</h6>
                     {[
@@ -152,9 +152,9 @@ const Home = () => {
               </div>
             </div>
 
-            { }
+            {}
             <div>
-              { }
+              {}
               <div className="products-header">
                 <h5 className="products-title">
                   <strong>Produtos</strong>
@@ -171,7 +171,7 @@ const Home = () => {
                 </select>
               </div>
 
-              { }
+              {}
               <div className="products-grid">
                 {produtos.map((produto) => (
                   <div key={produto.id} className="product-card">
