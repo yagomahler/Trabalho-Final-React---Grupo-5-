@@ -6,6 +6,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import styles from "./Perfil.module.css";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import { useUser } from "../../contexts/userContext";
 
 const Perfil = () => {
     const navigate = useNavigate();
@@ -13,6 +14,7 @@ const Perfil = () => {
     const [editando, setEditando] = useState(false);
     const [form, setForm] = useState({});
     const API_URL = "https://691386fef34a2ff1170c47e2.mockapi.io/clientes";
+    const{logout} = useUser();
 
     useEffect(() => {
         const dados = JSON.parse(localStorage.getItem("usuario"));
@@ -26,6 +28,7 @@ const Perfil = () => {
 
     const handleLogout = () => {
         localStorage.removeItem("usuario");
+        logout();
         navigate("/");
     };
 
@@ -42,6 +45,21 @@ const Perfil = () => {
         } catch (error) {
             console.error("Erro ao atualizar:", error);
             alert("Erro ao salvar alterações!");
+        }
+    };
+
+    const handleDelete = async () => {
+        const confirmacao = window.confirm("Tem certeza que deseja excluir sua conta? Essa ação não pode ser desfeita!");
+        if (!confirmacao) return;
+
+        try {
+            await axios.delete(`${API_URL}/${usuario.id}`);
+            localStorage.removeItem("usuario");
+            alert("Conta excluída com sucesso!");
+            navigate("/");
+        } catch (error) {
+            console.error("Erro ao excluir conta:", error);
+            alert("Erro ao excluir a conta!");
         }
     };
 
@@ -65,12 +83,15 @@ const Perfil = () => {
                                 <li className="list-group-item"><b>Telefone:</b> {usuario.telefone}</li>
                                 <li className="list-group-item"><b>CEP:</b> {usuario.cep}</li>
                             </ul>
-                            <div className="d-flex justify-content-between">
-                                <button className="btn btn-outline-primary" onClick={() => setEditando(true)}>
+                            <div className="d-flex justify-content-between flex-wrap gap-2">
+                                <button className="btn btn-outline-primary flex-grow-1" onClick={() => setEditando(true)}>
                                     <i className="bi bi-pencil-square me-2"></i>Editar Perfil
                                 </button>
-                                <button className="btn btn-outline-danger" onClick={handleLogout}>
+                                <button className="btn btn-outline-danger flex-grow-1" onClick={handleLogout}>
                                     <i className="bi bi-box-arrow-right me-2"></i>Sair
+                                </button>
+                                <button className="btn btn-danger flex-grow-1" onClick={handleDelete}>
+                                    <i className="bi bi-trash3 me-2"></i>Excluir Conta
                                 </button>
                             </div>
                         </>
