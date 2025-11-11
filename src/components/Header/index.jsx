@@ -34,7 +34,7 @@ const Header = () => {
           </div>
 
           <div className="nav-links">
-            <Link className="nav-link" to="/login">
+            <Link className="nav-link" to={usuarioLogado ? "/perfil" : "/login"}>
               👤 {usuarioLogado ? usuarioLogado.nome : "Conta"}
             </Link>
             <Link className="nav-link" to="/sobre">

@@ -16,7 +16,7 @@ const AppRouter = () => {
   return (
     <Routes>
       <Route path="/" element={<Main/>}></Route>
-      <Route path="/login" element={<Login/>}></Route>
+      <Route path="/login" element={usuario ? <Navigate to="/perfil" /> : <Login />}></Route>
       <Route path="/perfil" element={usuario ? <Perfil /> : <Navigate to="/login" />}/>
       {/*<Route path="/produto/:id" element={<Produto/>}></Route>*/}
       <Route path="/categoria" element={<Categoria/>}></Route> {/*categoria/:id*/}
