@@ -1,0 +1,11 @@
+.perfilContainer {
+    max-width: 600px;
+}
+
+.card {
+    border-radius: 1rem;
+}
+
+.list-group-item {
+    font-size: 1rem;
+}
