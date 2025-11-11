@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import "./Home.css";
-import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import Header from "../../components/Header";
 import { usaCarrinho } from "../../contexts/Contexto";
+import "./Home.css";
 
 const Home = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -29,8 +29,8 @@ const Home = () => {
 
   const categories = [
     { id: "all", name: "Todos os Produtos", icon: "📦" },
-    { id: "computadores", name: "Computadores", icon: "🖥️" }, 
-    { id: "notebooks", name: "Notebooks", icon: "💻" }, 
+    { id: "computadores", name: "Computadores", icon: "🖥️" },
+    { id: "notebooks", name: "Notebooks", icon: "💻" },
     { id: "periféricos", name: "Periféricos", icon: "⌨️" },
     { id: "smartphones", name: "Smartphones", icon: "📱" },
     { id: "tvs", name: "TVs", icon: "📺" },
@@ -54,10 +54,11 @@ const Home = () => {
                 <button
                   key={cat.id}
                   onClick={() => setSelectedCategory(cat.id)}
-                  className={`category-btn ${selectedCategory === cat.id
+                  className={`category-btn ${
+                    selectedCategory === cat.id
                       ? "category-btn-active"
                       : "category-btn-inactive"
-                    }`}
+                  }`}
                 >
                   {cat.icon} {cat.name}
                 </button>
@@ -67,12 +68,12 @@ const Home = () => {
         </div>
         <div className="main-container">
           <div className="main-grid">
-            { }
+            {}
             <div>
               <div className="filters-card">
                 <h5 className="filters-header">🔧 Filtros</h5>
                 <div className="filters-body">
-                  { }
+                  {}
                   <div className="filter-section">
                     <h6 className="filter-title">Faixa de Preço</h6>
                     <div className="price-input-wrapper">
@@ -115,7 +116,7 @@ const Home = () => {
                     </div>
                   </div>
 
-                  { }
+                  {}
                   <div className="filter-section">
                     <h6 className="filter-title">Marcas</h6>
                     {["Samsung", "Apple", "LG", "Sony"].map((brand) => (
@@ -128,7 +129,7 @@ const Home = () => {
                     ))}
                   </div>
 
-                  { }
+                  {}
                   <div className="filter-section">
                     <h6 className="filter-title">Avaliação</h6>
                     {[
@@ -152,9 +153,9 @@ const Home = () => {
               </div>
             </div>
 
-            { }
+            {}
             <div>
-              { }
+              {}
               <div className="products-header">
                 <h5 className="products-title">
                   <strong>Produtos</strong>
@@ -171,7 +172,7 @@ const Home = () => {
                 </select>
               </div>
 
-              { }
+              {}
               <div className="products-grid">
                 {/* 
                 Substitir o array [1,2,3...] por products.map() quando conectar API
@@ -219,11 +220,10 @@ const Home = () => {
                       </button>
                     </div>
                   </div>
-
                 ))}
               </div>
 
-              { }
+              {}
               <div className="pagination-container">
                 <button className="pagination-btn pagination-btn-disabled">
                   Anterior
@@ -245,7 +245,7 @@ const Home = () => {
           </div>
         </div>
 
-        { }
+        {}
       </div>
       <Footer />
     </div>
