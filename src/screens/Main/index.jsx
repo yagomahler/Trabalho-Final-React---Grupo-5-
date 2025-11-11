@@ -2,30 +2,29 @@ import { useEffect, useState } from "react";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import { usaCarrinho } from "../../contexts/Contexto";
-import "./Home.css";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Home = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [priceRange, setPriceRange] = useState({ min: 0, max: 10000 });
-  const [products, setProducts] = useState([]);
+  const [produtos, setProdutos] = useState([]);
   const { addCarrinho } = usaCarrinho();
 
-  useEffect(() => {
-    fetch("https://fakestoreapi.com/products/1")
-      .then((res) => res.json())
-      .then((json) => console.log(json));
-    // Exemplo de como buscar produtos da API:
-    // async function fetchProducts() {
-    //   try {
-    //     const response = await fetch('API_URL');
-    //     const data = await response.json();
-    //     setProducts(data);
-    //   } catch (error) {
-    //     console.error('Erro ao buscar produtos:', error);
-    //   }
-    // }
-    // fetchProducts();
-  }, []);
+  const navigate = useNavigate();
+
+
+  useEffect(()=> {
+    axios
+      .get("http://localhost:8080/produtos")
+      .then((response) => {
+        console.log("deu tudo certo");
+        setProdutos(response.data)
+        navigate("/")
+      })
+      .catch("Erro na requisição");
+  },[]);
+ 
 
   const categories = [
     { id: "all", name: "Todos os Produtos", icon: "📦" },
@@ -178,12 +177,12 @@ const Home = () => {
                 Substitir o array [1,2,3...] por products.map() quando conectar API
                 Exemplo: products.map((product) => ( ... use product.nome, product.preco, etc ... ))
               */}
-                {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => (
-                  <div key={item} className="product-card">
+                {produtos.map((props) => (
+                  <div key={props.id} className="product-card">
                     <div className="product-image-wrapper">
                       <div className="product-image-placeholder">
                         <div className="product-image-content">
-                          <div className="product-image-icon">📦</div>
+                          <div className="product-image-icon">{props.urlImagem}</div>
                           <p className="product-image-text">Imagem da API</p>
                         </div>
                       </div>
@@ -191,8 +190,8 @@ const Home = () => {
                       <button className="product-favorite-btn">❤️</button>
                     </div>
                     <div className="product-body">
-                      <p className="product-category">Categoria</p>
-                      <h6 className="product-name">Nome do Produto {item}</h6>
+                      <p className="product-category"> `Categoria ${props.categoria}` </p>
+                      <h6 className="product-name">{props.nome}</h6>
                       <div className="product-rating">
                         <span className="rating-stars">⭐⭐⭐⭐⭐</span>
                         <span className="rating-count">(123)</span>
@@ -200,22 +199,21 @@ const Home = () => {
                       <div className="product-old-price">
                         <del className="old-price-text">R$ 1.299,00</del>
                       </div>
-                      <h5 className="product-price">R$ 1.099,00</h5>
+                      <h5 className="product-price">{props.preco}</h5>
                       <p className="product-installment">
                         ou 10x de R$ 109,90 sem juros
                       </p>
+                      <p>{props.descricao}</p>
                       <button
                         className="add-to-cart-btn"
                         onClick={() =>
                           addCarrinho({
-                            id: item,
-                            title: `Nome do Produto ${item}`,
-                            category: "Categoria Teste",
-                            price: 1099.0,
-                            image: "https://via.placeholder.com/150",
-                          })
-                        }
-                      >
+                            id: `${props.id}`,
+                            title: `Nome do Produto ${props.nome}`,
+                            category: `Categoria - ${props.categoria}`,
+                            price: `${props.preco}`,
+                            image: `${props.urlImagem}`,
+                          })}>
                         🛒 Adicionar ao Carrinho
                       </button>
                     </div>
