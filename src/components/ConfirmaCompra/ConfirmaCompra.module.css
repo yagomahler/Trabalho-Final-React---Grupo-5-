@@ -110,3 +110,15 @@
     margin-bottom: 1rem;
   }
 }
+
+
+@media (max-width: 900px) {
+  .modalOverlay {
+    flex-direction: column;
+  }
+
+  .modalContent {
+    width: 80%;
+  }
+
+}
